@@ -3,13 +3,7 @@
 
 <input type='file' multiple accept='image/*' class='hide' #inputElement (change)='onInputChange($event)'>
 
-<header>
-  <button>ABOUT</button>
-  <span class='flex-spacer'></span>
-  <span class='app-title'>Latrika Saint Petersburg</span>
-  <span class='flex-spacer'></span>
-  <button>COLLECTION</button>
-</header>
+<siu-header></siu-header>
 
 <div style='text-align:center' class='content'>
   <!--  <div class='img-shadow'>
@@ -63,7 +57,7 @@
         <button>yapıştır</button>
       </div>
 
-<!--      <div class='percent-done'>% {{percentDone}}</div>-->
+      <div class='percent-done'>% {{percentDone}}</div>
 
       <!--      <div>
               <svg height='24px' viewBox='0 0 24 24' width='24px' fill='#000000'>

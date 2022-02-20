@@ -1,0 +1,16 @@
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.app-title {
+  font-family: Arimo, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.flex-spacer {
+  flex: 1 0 auto;
+}
+

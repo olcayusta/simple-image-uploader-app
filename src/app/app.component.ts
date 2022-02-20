@@ -5,6 +5,7 @@ import {
   ElementRef,
   OnInit,
   Renderer2,
+  ɵmarkDirty as markDirty
 } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { UploadService } from './upload.service';
@@ -89,6 +90,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       })
 
       this.blobFiles.push(image);
+      markDirty(this)
 
     })
 
