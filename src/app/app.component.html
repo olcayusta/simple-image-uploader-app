@@ -1,21 +1,124 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center" class="content">
-    <h1>
-        Welcome to {{title}}!
-    </h1>
-    <span style="display: block">{{ title }} app is running!</span>
-    <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<siu-file-drop></siu-file-drop>
+
+<input type='file' multiple accept='image/*' class='hide' #inputElement (change)='onInputChange($event)'>
+
+<header>
+  <button>ABOUT</button>
+  <span class='flex-spacer'></span>
+  <span class='app-title'>Latrika Saint Petersburg</span>
+  <span class='flex-spacer'></span>
+  <button>COLLECTION</button>
+</header>
+
+<div style='text-align:center' class='content'>
+  <!--  <div class='img-shadow'>
+      <img [src]='blob' alt='Image Title'>
+    </div>-->
+
+  <!--  <div class='content' style='text-align: center;display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;'>
+      <div class='img-shadow'><img alt='Image Title'
+                                   src='https://i.pinimg.com/564x/c3/eb/fd/c3ebfd6223ead4ba564cf95665f1cf4e.jpg'>
+      <span>LİNKİ KOPYALA / SİL</span></div>
+      <div class='img-shadow'><img alt='Image Title'
+                                   src='https://i.pinimg.com/564x/56/b0/6e/56b06e432e33783e2bb7dd029b8984ed.jpg'></div>
+      <div class='img-shadow'><img alt='Image Title'
+                                   src='https://i.pinimg.com/564x/06/50/54/06505480222ded589c81c4ea8da1ef7e.jpg'></div>
+      <div class='img-shadow'><img alt='Image Title'
+                                   src='https://i.pinimg.com/736x/92/47/67/924767f7c53daf80b545599a0a67e3df.jpg'></div>
+    </div>-->
+
+  <!-- <img width='300' alt='Angular Logo'
+        src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='>-->
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-    </li>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-</ul>
+
+<main>
+  <section>
+
+    <div class='grid-list' *ngIf='loaded'>
+
+      <!--    <div class='item' *ngFor='let blob of blobFiles'>
+            <div class='img-shadow'>
+              <img [src]='blob' alt=''>
+            </div>
+            <div class='buttons'>
+              <button class='link-btn'>Kopyala</button>
+              <button class='remove-btn'>Sil</button>
+            </div>
+          </div>-->
+    </div>
+
+    <!--    <div class="content">
+          <h2>Kemi</h2>
+          <h2>Kemi</h2>
+        </div>-->
+
+    <div class='main-title'>
+
+      <div style='display: flex'>
+        <button (click)='inputElement.click()'>seç</button>
+        <span class='bracket'>•</span>
+        <span>bırak</span>
+        <span class='bracket'>•</span>
+        <button>yapıştır</button>
+      </div>
+
+<!--      <div class='percent-done'>% {{percentDone}}</div>-->
+
+      <!--      <div>
+              <svg height='24px' viewBox='0 0 24 24' width='24px' fill='#000000'>
+                <path d='M0 0h24v24H0V0z' fill='none' />
+                <path d='M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z' />
+              </svg>
+            </div>-->
+
+      <div>
+        <div class='blob-item' *ngFor='let blob of blobFiles'>
+          <img [src]='blob' alt=''>
+          <span class='check-icon'></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <h2>Here are some links to help you start: </h2>
+     <ul>
+       <li>
+         <h2><a target='_blank' rel='noopener' href='https://angular.io/tutorial'>Tour of Heroes</a></h2>
+       </li>
+       <li>
+         <h2><a target='_blank' rel='noopener' href='https://angular.io/cli'>CLI Documentation</a></h2>
+       </li>
+       <li>
+         <h2><a target='_blank' rel='noopener' href='https://blog.angular.io/'>Angular blog</a></h2>
+       </li>
+     </ul>-->
+  </section>
+</main>
+
+<div class='uploader-box' [class.active]='loading'>
+  <div class='uploader-inner'>
+    <img [src]='blob' alt=''>
+    <div class='upload-status-text'>
+      <span>1 / 2</span>
+      <span class='bracket'>•</span>
+      <!--  <span>% {{percentDone || 72}}</span>-->
+    </div>
+
+    <!--    <div class="w3-light-grey w3-round-xlarge">
+          <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+        </div>-->
+
+  </div>
+</div>
+
+<footer>
+  <div class='footer-content'>
+    <!--  © 2022 SIUS - SSS - Privacy Policy - Report-->
+    <span>FW 20/21</span>
+    <span class='flex-spacer'></span>
+    <a [href]='githubLink'>#GITHUB</a>
+  </div>
+</footer>
+
 <router-outlet></router-outlet>
