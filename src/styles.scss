@@ -40,8 +40,6 @@ header {
 }
 
 
-
-
 footer {
   display: none;
   background-color: #000;
@@ -161,6 +159,13 @@ svg {
   }
 }
 
+.description {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .main-title {
   min-height: calc(100vh - 80px);
   font-size: 48px;
@@ -172,17 +177,17 @@ svg {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 16px;
-/*
-  animation: center-animate 4s ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  /*
+    animation: center-animate 4s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
-  width: 447px;
-  height: 100%;
-  border: 1px solid;
-  border-radius: 500px;
-  margin: 64px auto;
-  height: 480px;*/
+    width: 447px;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 500px;
+    margin: 64px auto;
+    height: 480px;*/
 
   button {
     display: block;
@@ -307,5 +312,11 @@ svg {
                     100% 100%,
                     0% 100%
     );
+  }
+}
+
+@media (max-width: 599px) {
+  .main-title {
+    display: none;
   }
 }
